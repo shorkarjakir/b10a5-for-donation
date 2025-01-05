@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <nav class="shadow-lg">
+            <div class="flex flex-col justify-center bg-base-100 my-2 navbar lg:flex-row">
+                <div class="navbar-start ml-6 felx justify-center items-center lg:justify-normal">
+                  <div class="">
+                   <button class="btn font-bold text-black"><a href="./blog.html">Blog</a></button>
+                   <button class="btn font-bold text-black hidden"><a href="./index.html">Home</a></button>
+                  </div>
+                </div>
+                <div class="navbar-center felx justify-center items-center">
+                  <a href="#"><img src="./assets/logo.png" alt=""></a>
+                  <a class="text-xl font-serif hover:border-gray-400 font-bold ml-2" href="#">Donation for Support</a>
+                </div>
+                <div class="navbar-end felx justify-center items-center lg:justify-end">
+                  <div class="inline-flex items-center space-x-2 mr-6">
+                    <span><img src="./assets/coin.png" alt=""></span>
+                    <span id="total-balance" class="font-bold">5000</span>
+                    <span class="font-bold">BDT</span>
+                  </div>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main class="max-w-fit p-8">
+        <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" checked="checked" />
+            <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p>DOM allow us to control and changes data, modify and add using scripting Language </p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p>I can select element from DOM using JS function. There are some ways, such as: getElementByID, getElementsByClass, also QuerySelector and QuerySelectorAll</p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p>When i use form to Sumbit data to the system then defult browser system is Reload the Data. That, interupt the Data submission process. That's the Reason event Delegation is important.</p>
+            </div>
+          </div>
+          <div class="collapse bg-base-200">
+            <input type="radio" name="my-accordion-1" />
+            <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p>I can manipulate elements attributes just by get the element by ID and set or change it. it's alos applied for styles. I can set any type of styles.</p>
+            </div>
+          </div>
+          
+    </main>
+</body>
+</html>

@@ -7,13 +7,14 @@
     <!-- Tailwind and daisy Ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+      <!-- color: lime-400 -->
 </head>
 <body>
-    <nav class="shadow-lg">
+    <nav class="shadow-lg position-fixed">
         <div class="flex flex-col justify-center bg-base-100 my-2 navbar lg:flex-row">
             <div class="navbar-start ml-6 felx justify-center items-center lg:justify-normal">
               <div class="">
-               <button class="btn bg-lime-400 font-bold text-black">Blog</button>
+               <button class="btn font-bold text-black"><a href="./blog.html">Blog</a></button>
               </div>
             </div>
             <div class="navbar-center felx justify-center items-center">
@@ -23,19 +24,105 @@
             <div class="navbar-end felx justify-center items-center lg:justify-end">
               <div class="inline-flex items-center space-x-2 mr-6">
                 <span><img src="./assets/coin.png" alt=""></span>
-                <span class="font-bold">5000</span>
+                <span id="total-balance" class="font-bold">5000</span>
                 <span class="font-bold">BDT</span>
               </div>
             </div>
           </div>
           <!-- card List btn -->
            <div class="flex justify-center items-center gap-3  mt-4 lg:mt-9">
-            <button class="btn">Donation</button>
-            <button class="btn">History</button>
+            <button id="donation-list" class="btn bg-lime-400">Donation</button>
+            <button id="History-list" class="btn">History</button>
            </div>
     </nav>
     <main>
+      <!-- Donation List: -->
+      <div class="hero bg-base-200 mt-6">
+        <div class="hero-content flex flex-col items-start lg:flex-row">
+          <div class="lg:max-w-[50%]">
+            <img
+            src="./assets/noakhali.png"
+            class="rounded-lg shadow-2xl" />
+          </div>
+          <div class="lg:max-w-[50%] p-6">
+            <div class="inline-flex items-center space-x-2 mr-6">
+              <span><img src="./assets/coin.png" alt=""></span>
+              <span id="Noakhali-donated-amount" class="font-bold">200</span>
+              <span class="font-bold">BDT</span>
+            </div>
+            <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+            <p class="py-3">
+              Continuous rain on Friday and Saturday worsened the flood situation across eight upazilas of Noakhali district.
+            
+              The most affected upazilas are Senbagh, Begumganj, Sadar, Sonaimuri, and Chatkhil.
+            
+              Upazila Nirbahi Officer (UNO) of Noakhali Sadar upazila Akhinoor Jahan Neela said, "Floodwater had started to recede,
+              but the recent rain caused water levels to rise in 13 unions and Noakhali municipality."
+            </p>
+            <input id="noakhali-amount" type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
+            <button id="noakhali-donate-btn" class="btn btn-primary w-full">Donate</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero bg-base-200 mt-6">
+        <div class="hero-content flex flex-col items-start lg:flex-row">
+          <div class="lg:max-w-[50%]">
+            <img
+            src="./assets/feni.png"
+            class="rounded-lg shadow-2xl" />
+          </div>
+          <div class="lg:max-w-[50%] p-6">
+            <div class="inline-flex items-center space-x-2 mr-6">
+              <span><img src="./assets/coin.png" alt=""></span>
+              <span id="feni-donated-amount" class="font-bold">1000</span>
+              <span class="font-bold">BDT</span>
+            </div>
+            <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+            <p class="py-3">
+              Bangladesh's Sherpur, Netrokona recently dealt with one of the worst floods after Feni. Massive regions have been
+              swamped by consecutive floods, forcing thousands of residents to relocate and damaging infrastructure, houses, and
+              crops. The flood in Sherpur claimed the lives of 11 persons in total. Hundreds of villages in the upazilas of
+              Durgapur, Kalmakanda, Purbadhala, Barhatta, and Netrokona Sadar become immersed under water. Flash floods have left
+              67,520 people stranded in Bangladesh's Sherpur, Netrokona, and Mymensingh districts. About 20,000 hectares of Aman
+              paddy have been damaged, and houses, highways, and several educational facilities have been inundated. According to
+              the Sherpur district Fisheries Officer, fish from more than 2,000 fish enclosures have been washed away.
+            </p>
+            <input type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
+            <button class="btn btn-primary w-full">Donate</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero bg-base-200 mt-6">
+        <div class="hero-content flex flex-col items-start lg:flex-row">
+          <div class="lg:max-w-[50%]">
+            <img
+            src="./assets/quota-protest.png"
+            class="rounded-lg shadow-2xl" />
+          </div>
+          <div class="lg:max-w-[50%] p-6">
+            <div class="inline-flex items-center space-x-2 mr-6">
+              <span><img src="./assets/coin.png" alt=""></span>
+              <span id="quota-donated-amount" class="font-bold">20000</span>
+              <span class="font-bold">BDT</span>
+            </div>
+            <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+            <p class="py-3">
+              On 15 July 2024, students of Dhaka University were sitting with placards and flags in a peaceful protest calling for
+              reforms on the quota allocation for government jobs in Bangladesh. Suddenly, they were attacked by individuals armed
+              with rods, sticks and clubs with a few even brandishing revolvers. Within hours, a pattern emerged across the country
+              with similar attacks coordinated by people believed to be members of the Bangladesh Chatra League (BCL), a group
+              affiliated with the ruling Awami League (AL), against student protesters.
+            </p>
+            <input type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
+            <button class="btn btn-primary w-full">Donate</button>
+          </div>
+        </div>
+      </div>
 
     </main>
+    <script src="./js/utilities.js"></script>
+    <script src="./js/donation.js"></script>
 </body>
 </html>
