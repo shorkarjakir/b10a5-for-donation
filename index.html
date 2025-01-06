@@ -10,11 +10,11 @@
       <!-- color: lime-400 -->
 </head>
 <body>
-    <nav class="shadow-lg position-fixed">
-        <div class="flex flex-col justify-center bg-base-100 my-2 navbar lg:flex-row">
+    <nav class="shadow-lg sticky top-0 z-50 bg-emerald-50">
+        <div class="flex flex-col justify-center bg-emerald-50 my-2 navbar lg:flex-row">
             <div class="navbar-start ml-6 felx justify-center items-center lg:justify-normal">
               <div class="">
-               <button class="btn font-bold text-black"><a href="./blog.html">Blog</a></button>
+               <button id="blog-btn" class="btn font-bold bg-lime-400 text-black"><a href="./blog.html">Blog</a></button>
               </div>
             </div>
             <div class="navbar-center felx justify-center items-center">
@@ -35,7 +35,7 @@
             <button id="History-list" class="btn">History</button>
            </div>
     </nav>
-    <main>
+    <main id="donation-lsit-container" class="">
       <!-- Donation List: -->
       <div class="hero bg-base-200 mt-6">
         <div class="hero-content flex flex-col items-start lg:flex-row">
@@ -50,7 +50,7 @@
               <span id="Noakhali-donated-amount" class="font-bold">200</span>
               <span class="font-bold">BDT</span>
             </div>
-            <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+            <h1 id="noakhali-title" class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
             <p class="py-3">
               Continuous rain on Friday and Saturday worsened the flood situation across eight upazilas of Noakhali district.
             
@@ -78,7 +78,7 @@
               <span id="feni-donated-amount" class="font-bold">1000</span>
               <span class="font-bold">BDT</span>
             </div>
-            <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+            <h1 id="feni-title" class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
             <p class="py-3">
               Bangladesh's Sherpur, Netrokona recently dealt with one of the worst floods after Feni. Massive regions have been
               swamped by consecutive floods, forcing thousands of residents to relocate and damaging infrastructure, houses, and
@@ -88,8 +88,8 @@
               paddy have been damaged, and houses, highways, and several educational facilities have been inundated. According to
               the Sherpur district Fisheries Officer, fish from more than 2,000 fish enclosures have been washed away.
             </p>
-            <input type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
-            <button class="btn btn-primary w-full">Donate</button>
+            <input id="feni-amount-input" type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
+            <button id="feni-donated-btn" class="btn btn-primary w-full">Donate</button>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@
               <span id="quota-donated-amount" class="font-bold">20000</span>
               <span class="font-bold">BDT</span>
             </div>
-            <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+            <h1 id="quota-title" class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
             <p class="py-3">
               On 15 July 2024, students of Dhaka University were sitting with placards and flags in a peaceful protest calling for
               reforms on the quota allocation for government jobs in Bangladesh. Suddenly, they were attacked by individuals armed
@@ -115,14 +115,34 @@
               with similar attacks coordinated by people believed to be members of the Bangladesh Chatra League (BCL), a group
               affiliated with the ruling Awami League (AL), against student protesters.
             </p>
-            <input type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
-            <button class="btn btn-primary w-full">Donate</button>
+            <input id="quota-input-amount" type="text" placeholder="Type Amount you Want to Donate" class="input input-bordered my-2 w-full max-w-full" />
+            <button  id="quota-donate-btn" class="btn btn-primary w-full">Donate</button>
           </div>
         </div>
       </div>
-
     </main>
-    <script src="./js/utilities.js"></script>
-    <script src="./js/donation.js"></script>
+    <!-- History Section -->
+     <div id="History-container" class="mt-4 my-3 hidden shadow-sm bg-slate-50 p-5">
+      
+     </div>
+         <!-- Modal -->
+       <!-- The button to open modal -->
+<!-- <label for="my_modal_6" class="btn hidden"></label> -->
+
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+  <div class="modal-box flex flex-col items-center">
+    <h1 class="text-2xl font-bold">Thanks For your Support</h1>
+    <span><img src="./assets/coin.png" alt=""></span>
+    <p class="py-4">You have succesfully donated.</p>
+    <div class="modal-action">
+      <label for="my_modal_6" class="btn">Close!</label>
+    </div>
+  </div>
+</div>
+
+<script src="./js/utilities.js"></script>
+<script src="./js/shortucut.js"></script>
+<script src="./js/donation.js"></script>
 </body>
 </html>
